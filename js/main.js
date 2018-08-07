@@ -116,9 +116,7 @@ resetRestaurants = (restaurants) => {
   ul.innerHTML = '';
 
   // Remove all map markers
-  if (self.markers) {
-    self.markers.forEach(marker => marker.remove());
-  }
+  self.markers.forEach(m => m.setMap(null));
   self.markers = [];
   self.restaurants = restaurants;
 }
@@ -142,6 +140,7 @@ createRestaurantHTML = (restaurant) => {
   const image = document.createElement('img');
   image.className = 'restaurant-img';
   image.src = DBHelper.imageUrlForRestaurant(restaurant);
+  image.setAttribute("alt", restaurant.name + " resturant");
   li.append(image);
   li.tabIndex = 0;
 
@@ -160,6 +159,7 @@ createRestaurantHTML = (restaurant) => {
   const more = document.createElement('a');
   more.innerHTML = 'View Details';
   more.href = DBHelper.urlForRestaurant(restaurant);
+  more.setAttribute("aria-label", "View more Details of "+restaurant.name);
   li.append(more)
 
   return li
