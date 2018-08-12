@@ -19,7 +19,7 @@ In this project, I'm converting a static webpage with no accessibility, responsi
 
 ## Installation and running
 
-1. Visit the [project's page](https://3weeda.github.io/Restaurant-reviews-app-stage1/)
+1. Visit the [project's page](https://github.com/3weeda/Restaurant-reviews-app-stage1.git)
 2. Clone or download the zip of this repository.
 3. Open a terminal and cd into the root folder of this repository.
 4. check python version by `python -V`
