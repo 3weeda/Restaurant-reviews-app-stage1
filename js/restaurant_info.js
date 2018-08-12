@@ -52,9 +52,22 @@ fillRestaurantHTML = (restaurant = self.restaurant) => {
   const address = document.getElementById('restaurant-address');
   address.innerHTML = restaurant.address;
 
+  const allTags = {
+    1: "The inside of MISSION CHINESE FOOD",
+    2: "A pizza plate at EMILY",
+    3: "Neatly-set tables at KANG HO DONG",
+    4: "The outside of KATZ'S DELICATESSEN",
+    5: "View of the kitchen at ROBERTA'S PIZZA",
+    6: "Fully booked tables at HOMETOWN BBQ",
+    7: "The outside of SUPERIORITY BURGER",
+    8: "The street banner of THE DUTCH",
+    9: "The bar view at MU RAMEN",
+    10: "The fascinating interior design of CASA ENRIQUE"
+  }
+
   const image = document.getElementById('restaurant-img');
   image.className = 'restaurant-img'
-  image.setAttribute("alt", restaurant.name + " restaurant");
+  image.setAttribute("alt", allTags[restaurant.id] + " restaurant");
   image.src = DBHelper.imageUrlForRestaurant(restaurant);
 
   const cuisine = document.getElementById('restaurant-cuisine');

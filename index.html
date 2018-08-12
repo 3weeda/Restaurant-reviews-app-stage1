@@ -16,7 +16,7 @@
     </nav>
   </header>
 
-  <main role="main" id="maincontent">
+  <main id="maincontent">
     <section id="map-container">
       <div role="application" aria-label="Map of restaurants" id="map"></div>
     </section>
@@ -31,9 +31,13 @@
         </select>
       </div>
       <ul id="restaurants-list" tabindex="0" aria-label="List of restaurants"></ul>
+      <div class="clearfix"></div>
     </section>
   </main>
   <!--Service Worker scripts-->
+  <footer id="footer">
+    Copyright (c) 2017 <a href="/"><strong>Restaurant Reviews</strong></a> All Rights Reserved.
+  </footer>
   <script>
     if('serviceWorker' in navigator) {
         navigator.serviceWorker.register('sw.js')
@@ -45,9 +49,7 @@
   <script type="application/javascript" charset="utf-8" src="js/dbhelper.js"></script>
   <script type="application/javascript" charset="utf-8" src="js/main.js"></script>
   <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAUU6SqxJ4lb2KoF-MWI2AiUQL4ZLAPaOY&libraries=places&callback=initMap"></script>
-  <footer id="footer">
-    Copyright (c) 2017 <a href="/"><strong>Restaurant Reviews</strong></a> All Rights Reserved.
-  </footer>
+
 
 </body>
 

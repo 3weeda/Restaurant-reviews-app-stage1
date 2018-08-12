@@ -38,10 +38,12 @@
     <!-- End map -->
     <!-- Beginning restaurant -->
     <section id="restaurant-container">
-      <h2 tabindex="0" id="restaurant-name"></h2>
-      <img tabindex="0" id="restaurant-img">
-      <p tabindex="0" id="restaurant-cuisine"></p>
-      <p tabindex="0" id="restaurant-address"></p>
+      <!-- Next 4 lines are non-interactive so tabindex shouldn't be used according to
+      https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/tabindex#Accessibility_concerns-->
+      <h2 id="restaurant-name"></h2>
+      <img id="restaurant-img">
+      <p id="restaurant-cuisine"></p>
+      <p id="restaurant-address"></p>
       <table tabindex="0" id="restaurant-hours"></table>
     </section>
     <!-- end restaurant -->
